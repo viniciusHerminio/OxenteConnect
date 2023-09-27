@@ -119,6 +119,83 @@ body.blur-background {
 .SubmitButton:hover {
   background-color: #218c4b; /* Tom mais escuro de verde */
 }
+
 .Banner.blur-background {
   filter: blur(5px);
+}
+
+.BenefitsTitle {
+  font-family: 'Arial', sans-serif; /* Altere a fonte conforme desejado */
+  text-align: center;
+  margin: 20px 0;
+  color: #e65100;
+  font-size: 2em;
+  margin-top: 100px;
+}
+
+.BenefitsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte se não houver espaço suficiente */
+}
+
+.BenefitCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; /* Permite que os cards ocupem a largura disponível e se ajustem conforme necessário */
+}
+
+.BenefitCard .CardIcon {
+  width: 50px; /* Ajuste o tamanho conforme necessário */
+  height: 50px; /* Ajuste o tamanho conforme necessário */
+  margin-bottom: 10px; /* Espaçamento entre a imagem e o título */
+}
+
+.BenefitCard .CardTitle {
+  color: #e65100;
+  margin: 0;
+}
+
+.BenefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.BenefitCard .CardContent {
+  color: #333;
+}
+
+/* Adicione o desfoque quando o formulário está ativo */
+.BenefitCard.blur-background {
+  filter: blur(5px);
+}
+
+.CardContent0 {
+  margin-top: 100px;
+}
+
+.descricao0 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.descricao1 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.descricao2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
