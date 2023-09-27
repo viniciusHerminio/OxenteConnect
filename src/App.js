@@ -50,10 +50,10 @@ function App() {
 
   return (
     <div>
-      <div className="Header">
+      <div className={`Header ${showForm ? 'blur-background' : ''}`}>
         <img src={logo} className="Logo" alt="Logo" />
         <div className='opHeader'>
-          <h5 className='contato' onClick={handleContatoClick}>Contato</h5>
+          <h5 className={`contato ${showForm ? 'blur-text' : ''}`} onClick={handleContatoClick}>Contato</h5>
           <h5 className='plano'>Planos</h5>
         </div>
       </div>
@@ -95,9 +95,8 @@ function App() {
         </div>
       )}
 
-      {/* Cards de benefícios */}
-      <h1 className='BenefitsTitle'>Benefícios</h1>
-      <div className="BenefitsContainer">
+      <h1 className={`BenefitsTitle ${showForm ? 'blur-text' : ''}`}>Benefícios</h1>
+      <div className={`BenefitsContainer ${showForm ? 'blur-background' : ''}`}>
         {benefitsData.map((benefit, index) => (
           <div className="BenefitCard" key={index}>
             <div className="CardHeader">

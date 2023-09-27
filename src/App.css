@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  transition: filter 0.3s ease; /* Adiciona uma transição suave para o efeito de desfoque */
+  transition: filter 0.3s ease;
 }
 
 .Header {
@@ -41,11 +41,11 @@ body {
 }
 
 .opHeader .contato {
-  background-color: #27ae60; /* Cor verde */
+  background-color: #27ae60;
 }
 
 .opHeader .plano {
-  background-color: #27ae60; /* Cor verde */
+  background-color: #27ae60;
 }
 
 .FormContainer {
@@ -58,10 +58,10 @@ body {
   border-radius: 10px;
   max-width: 400px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
 }
 
-/* Aplica desfoque no conteúdo da página quando o formulário está visível */
-body.blur-background {
+.body.blur-background {
   filter: blur(5px);
 }
 
@@ -71,14 +71,15 @@ body.blur-background {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.8); /* Cor do overlay, ajuste conforme necessário */
-  backdrop-filter: blur(5px); /* Desfoque do overlay */
-  z-index: 999; /* Garante que o overlay esteja acima do conteúdo, mas abaixo do formulário */
-  display: none; /* Inicialmente oculto */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  display: none;
 }
 
 .blur-overlay.active {
-  display: block; /* Exibe o overlay quando o formulário está visível */
+  display: block;
+  z-index: 1000;
 }
 
 .FormTitle {
@@ -108,7 +109,7 @@ body.blur-background {
 .SubmitButton {
   display: block;
   margin: 0 auto;
-  background-color: #27ae60; /* Cor verde */
+  background-color: #27ae60;
   color: white;
   padding: 10px 30px;
   border: none;
@@ -117,7 +118,7 @@ body.blur-background {
 }
 
 .SubmitButton:hover {
-  background-color: #218c4b; /* Tom mais escuro de verde */
+  background-color: #218c4b;
 }
 
 .Banner.blur-background {
@@ -125,7 +126,7 @@ body.blur-background {
 }
 
 .BenefitsTitle {
-  font-family: 'Arial', sans-serif; /* Altere a fonte conforme desejado */
+  font-family: 'Arial', sans-serif;
   text-align: center;
   margin: 20px 0;
   color: #e65100;
@@ -138,7 +139,7 @@ body.blur-background {
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
-  flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte se não houver espaço suficiente */
+  flex-wrap: wrap;
 }
 
 .BenefitCard {
@@ -153,13 +154,13 @@ body.blur-background {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1; /* Permite que os cards ocupem a largura disponível e se ajustem conforme necessário */
+  flex: 1;
 }
 
 .BenefitCard .CardIcon {
-  width: 50px; /* Ajuste o tamanho conforme necessário */
-  height: 50px; /* Ajuste o tamanho conforme necessário */
-  margin-bottom: 10px; /* Espaçamento entre a imagem e o título */
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
 }
 
 .BenefitCard .CardTitle {
@@ -176,7 +177,10 @@ body.blur-background {
   color: #333;
 }
 
-/* Adicione o desfoque quando o formulário está ativo */
+.BenefitsContainer.blur-background {
+  filter: blur(5px);
+}
+
 .BenefitCard.blur-background {
   filter: blur(5px);
 }
@@ -198,4 +202,8 @@ body.blur-background {
 .descricao2 {
   margin-top: 50px;
   margin-bottom: 30px;
+}
+
+.BenefitsTitle.blur-text {
+  filter: blur(5px);
 }
