@@ -68,12 +68,12 @@ function App() {
           <form className="Form">
             <div className="FormField">
               <label htmlFor="nome">Nome completo:</label>
-              <input type="text" id="nome" name="nome" required />
+              <input type="text" id="nome" name="nome" required placeholder="Seu Nome Completo" />
             </div>
 
             <div className="FormField">
               <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="email" required placeholder="email@email.email" />
             </div>
 
             <div className="FormField">
