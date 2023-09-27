@@ -1,0 +1,12 @@
+.Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; /* Altura do cabeçalho - ajuste conforme necessário */
+  background-color: orangered; /* Background laranja */
+}
+
+.Logo {
+  max-width: 100%;
+  max-height: 100%;
+}
