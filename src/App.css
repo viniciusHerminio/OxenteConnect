@@ -207,3 +207,36 @@ body {
 .BenefitsTitle.blur-text {
   filter: blur(5px);
 }
+
+@media (max-width: 600px) {
+  
+  .opHeader .plano {
+    margin-left: 20px;
+  }
+
+  .opHeader h5 {
+    margin: 10px 0;
+  }
+
+  .FormContainer {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .FormTitle {
+    font-size: 1.5em;
+  }
+
+  .FormField label {
+    font-size: 0.9em;
+  }
+
+  .FormField input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 0.9em;
+  }
+}

@@ -104,7 +104,7 @@ function App() {
               <h3 className="CardTitle">{benefit.title}</h3>
             </div>
             <div className="CardContent">
-              <p className={`descricao${index}`}>{benefit.description}</p>
+              <p>{benefit.description}</p>
             </div>
           </div>
         ))}
