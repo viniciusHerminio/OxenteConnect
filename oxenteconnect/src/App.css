@@ -1,12 +1,35 @@
+body {
+  margin: 0; /* Remover margens padrão do body */
+}
+
 .Header {
+  position: fixed; /* Fixar o cabeçalho */
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 60px; /* Altura do cabeçalho - ajuste conforme necessário */
-  background-color: orangered; /* Background laranja */
+  background-color: white; /* Cor do cabeçalho */
+  z-index: 1000; /* Garante que o cabeçalho esteja sobre o banner */
 }
 
 .Logo {
-  max-width: 100%;
-  max-height: 100%;
+  max-height: 100%; /* Garante que a altura da logo se ajuste */
+}
+
+.Banner {
+  width: 100%;
+  margin-top: 60px; /* Margem para evitar sobreposição com o cabeçalho */
+}
+
+.opHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contato {
+  margin-right: 40px;
 }
