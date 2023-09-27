@@ -1,18 +1,19 @@
 body {
-  margin: 0; /* Remover margens padrão do body */
+  margin: 0;
+  transition: filter 0.3s ease; /* Adiciona uma transição suave para o efeito de desfoque */
 }
 
 .Header {
-  position: fixed; /* Fixar o cabeçalho */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 60px; /* Altura do cabeçalho - ajuste conforme necessário */
-  background-color: white; /* Cor do cabeçalho */
-  z-index: 1000; /* Garante que o cabeçalho esteja sobre o banner */
+  height: 60px;
+  background-color: white;
+  z-index: 1000;
 }
 
 .Logo {
@@ -21,7 +22,7 @@ body {
 
 .Banner {
   width: 100%;
-  margin-top: 60px; /* Margem para evitar sobreposição com o cabeçalho */
+  margin-top: 60px;
 }
 
 .opHeader {
@@ -30,6 +31,94 @@ body {
   justify-content: space-evenly;
 }
 
-.contato {
-  margin-right: 40px;
+.opHeader h5 {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.opHeader .contato {
+  background-color: #27ae60; /* Cor verde */
+}
+
+.opHeader .plano {
+  background-color: #27ae60; /* Cor verde */
+}
+
+.FormContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Aplica desfoque no conteúdo da página quando o formulário está visível */
+body.blur-background {
+  filter: blur(5px);
+}
+
+.blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8); /* Cor do overlay, ajuste conforme necessário */
+  backdrop-filter: blur(5px); /* Desfoque do overlay */
+  z-index: 999; /* Garante que o overlay esteja acima do conteúdo, mas abaixo do formulário */
+  display: none; /* Inicialmente oculto */
+}
+
+.blur-overlay.active {
+  display: block; /* Exibe o overlay quando o formulário está visível */
+}
+
+.FormTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.FormField {
+  margin-bottom: 15px;
+}
+
+.FormField label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.FormField input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.SubmitButton {
+  display: block;
+  margin: 0 auto;
+  background-color: #27ae60; /* Cor verde */
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.SubmitButton:hover {
+  background-color: #218c4b; /* Tom mais escuro de verde */
+}
+.Banner.blur-background {
+  filter: blur(5px);
 }
