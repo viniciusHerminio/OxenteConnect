@@ -134,12 +134,27 @@ body {
   margin-top: 100px;
 }
 
+.beneficioscompleto {
+  margin-top: 200px;
+}
+
+/* Adicione um background agradável para a área dos benefícios */
 .BenefitsContainer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
   flex-wrap: wrap;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  backdrop-filter: blur(10px);
+}
+
+/* Ajuste o estilo da descrição dos benefícios */
+.BenefitCard .CardContent {
+  color: #555;
 }
 
 .BenefitCard {
@@ -149,12 +164,19 @@ body {
   margin: 10px;
   max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(50px);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
+  opacity: 0;
+}
+
+.BenefitCard.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .BenefitCard .CardIcon {
@@ -173,20 +195,29 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.BenefitCard .CardContent {
-  color: #333;
-}
-
 .BenefitsContainer.blur-background {
-  filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .BenefitCard.blur-background {
+  backdrop-filter: blur(5px);
+}
+
+.beneficioscompletoblur-text {
   filter: blur(5px);
+  margin-top: 200px;
 }
 
 .CardContent0 {
   margin-top: 100px;
+}
+
+.CloseIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
 .descricao0 {
@@ -208,8 +239,79 @@ body {
   filter: blur(5px);
 }
 
+/* Novo estilo para o texto */
+.BenefitsTitle::after {
+  display: block;
+  margin: 20px 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.VideoSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.VideoSectionblur-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  filter: blur(5px)
+}
+
+.VideoSection iframe.blur-video {
+  filter: blur(5px);
+}
+
+.VideoTitleContainer {
+  margin-left: 50px;
+}
+
+.VideoTitle {
+  color: #e65100;
+}
+
+.PlansContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PlansContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; /* Ajuste conforme necessário */
+}
+
+.PlanCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(50px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  opacity: 0;
+}
+
+.PlanCard.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.CardTitle {
+  color: #e65100;
+}
+
 @media (max-width: 600px) {
-  
   .opHeader .plano {
     margin-left: 20px;
   }
@@ -239,5 +341,11 @@ body {
     box-sizing: border-box;
     font-size: 0.9em;
   }
+  
+  .VideoSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+  }
 }
-
