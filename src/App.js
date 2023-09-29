@@ -237,7 +237,7 @@ function App() {
 
       <div className='planosContainer'>
         <animated.h1 style={slideAnimation} className={`BenefitsTitle ${showForm ? 'blur-text' : ''}`}>Confira Nossos Planos</animated.h1>
-         <div className={`PlansContainer${showForm ? ' blur-text' : ''}`}>
+         <div className={`PlansContainer${showForm ? 'blur-text' : ''}`}>
         {plansData.map((plan, index) => (
           <div className="PlanCard" key={index}>
             <div className="CardHeader">
