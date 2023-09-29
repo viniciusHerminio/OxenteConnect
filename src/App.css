@@ -293,6 +293,78 @@ body {
 
 }
 
+.PlanCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  opacity: 0;
+}
+
+.PlanCard.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.CardTitle {
+  color: #e65100;
+  font-weight: bold;
+  font-size: 1.5em; /* Tamanho da fonte do título */
+  margin: 10px 0; /* Espaçamento entre o título e o conteúdo */
+  font-family: 'Nunito', sans-serif;
+}
+
+.PlanPrice {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2em; /* Tamanho da fonte do preço */
+  margin-bottom: 15px; /* Espaçamento entre o preço e o conteúdo */
+}
+
+.planodescricao0,
+.planodescricao1,
+.planodescricao2,
+.planodescricao3 {
+  font-family: 'Nunito', sans-serif;
+  margin-bottom: 15px; /* Espaçamento entre os benefícios e o conteúdo */
+}
+
+.PlanCard:hover {
+  transform: scale(1.05); /* Aumenta o tamanho em 5% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.subtitlePlan {
+  font-family: 'Nunito', sans-serif;
+  color: #e65100;
+  margin-top: 10px; /* Espaçamento acima dos benefícios */
+}
+
+.ButtonSpecialist {
+  background-color: #e65100;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 20px; /* Espaçamento acima do botão */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+}
+
+.ButtonSpecialist:hover {
+  background-color: #ff6f00; /* Cor de destaque ao passar o mouse */
+}
+
 .PlansContainer {
   display: flex;
   justify-content: center;
@@ -475,8 +547,18 @@ body {
   margin-top: 20px;
 }
 
+.Rodape {
+  background-color: #33333398; /* Cor de fundo do rodapé */
+  color: #fff; /* Cor do texto */
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Centralizar o texto */
+  font-size: 14px; /* Tamanho da fonte */
+  margin-top: 50px;
+}
 
-
+.Rodape p {
+  margin: 0; /* Remova a margem padrão para evitar espaço em branco extra */
+}
 
 
 @media (max-width: 600px) {

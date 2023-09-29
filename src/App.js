@@ -237,26 +237,32 @@ function App() {
 
       <div className='planosContainer'>
         <animated.h1 style={slideAnimation} className={`BenefitsTitle ${showForm ? 'blur-text' : ''}`}>Confira Nossos Planos</animated.h1>
-        <div className={`PlansContainer${showForm ? 'blur-text' : ''}`}>
-          {plansData.map((plan, index) => (
-            <animated.div style={slideAnimation} className="PlanCard" key={index}>
-              <div className="CardHeader">
-                <h3 className="CardTitle">{plan.name}</h3>
-                <p className="PlanPrice">{plan.price}</p>
-              </div>
-              <div className="CardContent">
-                <p className={`planodescricao${index}`}>{plan.description}</p>
-                <h4 className='subtitlePlan'>Benefícios:</h4>
-                <ul>
-                  {plan.beneficios.map((beneficio, idx) => (
-                    <li key={idx}>{beneficio}</li>
-                  ))}
-                </ul>
-              </div>
-            </animated.div>
-          ))}
-        </div>
+         <div className={`PlansContainer${showForm ? ' blur-text' : ''}`}>
+        {plansData.map((plan, index) => (
+          <div className="PlanCard" key={index}>
+            <div className="CardHeader">
+              <h3 className="CardTitle">{plan.name}</h3>
+              <p className="PlanPrice">{plan.price}</p>
+            </div>
+            <div className="CardContent">
+              <p className={`planodescricao${index}`}>{plan.description}</p>
+              <h4 className='subtitlePlan'>Benefícios:</h4>
+              <ul>
+                {plan.beneficios.map((beneficio, idx) => (
+                  <li key={idx}>{beneficio}</li>
+                ))}
+              </ul>
+              <button className={`ButtonSpecialist ${showForm ? 'blur-text' : ''}`} onClick={handleContatoClick}>
+                Fale com um especialista
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
+      </div>
+      <footer className="Rodape">
+      <p>Todos os direitos reservados &copy; {new Date().getFullYear()} Oxente Net</p>
+    </footer>
     </div>
   );
 }
