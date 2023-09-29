@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 60px;
+  height: 50px;
   background-color: white;
   z-index: 1000;
 }
@@ -22,6 +22,7 @@ body {
 
 .Banner {
   width: 100%;
+  height: auto;
   margin-top: 60px;
 }
 
@@ -449,9 +450,9 @@ body {
 
 .buttonNumberOne {
   display: inline-block;
-  padding: 15px 25px;
   height: 50px;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 10px 20px;
   font-weight: bold;
   color: white;
   background-color: #e65100;
@@ -486,7 +487,8 @@ body {
 }
 
 .fotoHomem{
-  width: 600px;
+  max-width: 600px;
+  height: auto;
 }
 
 .fotoHomemblur-text {
@@ -550,10 +552,10 @@ body {
 .Rodape {
   background-color: #33333398; /* Cor de fundo do rodapé */
   color: #fff; /* Cor do texto */
-  padding: 20px; /* Espaçamento interno */
   text-align: center; /* Centralizar o texto */
-  font-size: 14px; /* Tamanho da fonte */
   margin-top: 50px;
+  padding: 10px;
+  font-size: 12px;
 }
 
 .Rodape p {
@@ -572,7 +574,7 @@ body {
 
   .FormContainer {
     max-width: 100%;
-    padding: 20px;
+    padding: 10px;
   }
 
   .FormTitle {
@@ -581,9 +583,24 @@ body {
   }
 
   .FormField label {
-    font-size: 0.9em;
+    font-size: 14px;
     font-family: 'Nunito', sans-serif;
   }
+
+  .FormField input[type="text"],
+  .FormField input[type="email"],
+  .FormField input[type="tel"],
+  .FormField textarea {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.BenefitCard,
+.PlanCard {
+  max-width: 100%;
+  margin: 10px 0;
+}
 
   .FormField input {
     width: calc(100% - 20px);
@@ -607,5 +624,18 @@ body {
   .VideoSection.slide-in {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .buttonNumberOneContainer {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 250px;
+  }
+
+  .fotoHomem {
+    display: none;
   }
 }
