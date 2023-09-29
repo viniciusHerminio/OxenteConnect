@@ -109,7 +109,7 @@ body {
 .SubmitButton {
   display: block;
   margin: 0 auto;
-  background-color: #27ae60;
+  background-color: orangered;
   color: white;
   padding: 10px 30px;
   border: none;
@@ -118,7 +118,7 @@ body {
 }
 
 .SubmitButton:hover {
-  background-color: #218c4b;
+  background-color: orangered;
 }
 
 .Banner.blur-background {
@@ -132,6 +132,7 @@ body {
   color: #e65100;
   font-size: 2em;
   margin-top: 100px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .beneficioscompleto {
@@ -188,6 +189,7 @@ body {
 .BenefitCard .CardTitle {
   color: #e65100;
   margin: 0;
+  font-family: 'Nunito', sans-serif;
 }
 
 .BenefitCard:hover {
@@ -223,16 +225,23 @@ body {
 .descricao0 {
   margin-top: 50px;
   margin-bottom: 30px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .descricao1 {
   margin-top: 50px;
   margin-bottom: 30px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .descricao2 {
   margin-top: 50px;
   margin-bottom: 30px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.descricao3 {
+  font-family: 'Nunito', sans-serif;
 }
 
 .BenefitsTitle.blur-text {
@@ -250,7 +259,14 @@ body {
 .VideoSection {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 100px;
+  background-color: #cccccc2c;
+  padding: 30px;
+}
+
+.Videodescricao {
+  color: #333;
 }
 
 .VideoSectionblur-text {
@@ -270,6 +286,7 @@ body {
 
 .VideoTitle {
   color: #e65100;
+  font-family: 'Nunito', sans-serif;
 }
 
 .VideoTitleblur-text {
@@ -318,11 +335,45 @@ body {
   color: #e65100;
 }
 
+.PlanPrice {
+  font-family: 'Nunito', sans-serif;
+}
+
+.planodescricao0 {
+  font-family: 'Nunito', sans-serif;
+}
+
+.planodescricao1 {
+  font-family: 'Nunito', sans-serif;
+}
+
+.planodescricao2 {
+  font-family: 'Nunito', sans-serif;
+}
+
+.planodescricao3 {
+  font-family: 'Nunito', sans-serif;
+}
+
+.subtitlePlan {
+    font-family: 'Nunito', sans-serif;
+    color: #e65100;
+}
+
 .buttonNumberOneContainer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 20px;
+  margin-top: 200px;
+  margin-bottom: 250px;
+}
+
+.planosContainer {
+  margin-top: 200px;
+}
+
+.planosContainerblur-text {
+  filter: blur(5px);
 }
 
 .buttonNumberOne {
@@ -332,13 +383,15 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: white;
-  background-color: orange;
+  background-color: #e65100;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+  margin-top: 10px;
 }
 
 .buttonNumberOneblur-text {
@@ -385,6 +438,7 @@ body {
 
 .textoDaCopy{
   margin-bottom: 30px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .textoDaCopyblur-text{
@@ -395,10 +449,13 @@ body {
 .segundoTitle {
   margin-top: -20px;
   color: #e65100;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
 }
 
 .primeiroTitle {
   color: #e65100;
+  font-family: 'Nunito', sans-serif;
 }
 
 .primeiroTitleblur-text {
@@ -411,6 +468,15 @@ body {
   margin-top: -20px;
   color: #e65100;
 }
+
+.botaoVideo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
 
 
 
@@ -430,10 +496,12 @@ body {
 
   .FormTitle {
     font-size: 1.5em;
+    font-family: 'Nunito', sans-serif;
   }
 
   .FormField label {
     font-size: 0.9em;
+    font-family: 'Nunito', sans-serif;
   }
 
   .FormField input {
@@ -450,5 +518,13 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-top: 100px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .VideoSection.slide-in {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

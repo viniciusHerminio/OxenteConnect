@@ -7,6 +7,7 @@ import financeiro from './images/financeiro.png';
 import gestao from './images/gestão.png';
 import homemCelular from './images/homemCelular.jpg';
 import './App.css';
+import Slide from 'react-reveal/Slide';
 
 const benefitsData = [
   {
@@ -55,6 +56,7 @@ const plansData = [
 function App() {
   const [showForm, setShowForm] = useState(false);
   const [whatsapp, setWhatsapp] = useState('');
+  const [videoVisible, setVideoVisible] = useState(false);
 
   const handleContatoClick = () => {
     setShowForm(!showForm);
@@ -73,17 +75,31 @@ function App() {
       const planCards = document.querySelectorAll('.PlanCard');
       planCards.forEach((card) => {
         const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          card.classList.add('in-view');
-        } else {
-          card.classList.remove('in-view');
+        if (rect) {
+          if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            card.classList.add('in-view');
+          } else {
+            card.classList.remove('in-view');
+          }
         }
       });
+
+      const videoSection = document.querySelector('.VideoSection');
+      if (videoSection) {
+        const rect = videoSection.getBoundingClientRect();
+        if (rect) {
+          if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            setVideoVisible(true);
+          } else {
+            setVideoVisible(false);
+          }
+        }
+      }
     };
-  
+
     window.addEventListener('scroll', handleScroll);
-    handleScroll();  // Chame a função inicialmente para os cards visíveis ao carregar a página
-  
+    handleScroll();
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -109,23 +125,33 @@ function App() {
       <div className='buttonNumberOneContainer'>
       <div className='textoBotao'>
         <div className='textoCopy'>
-        <h2 className={`primeiroTitle${showForm ? 'blur-text' : ''}`}>Maximize sua eficiência empresarial</h2>
-        <h2 className={`segundoTitle${showForm ? 'blur-text' : ''}`}>com a telefonia digital!</h2>
-        <p className={`textoDaCopy${showForm ? 'blur-text' : ''}`}>Potencialize a comunicação da sua empresa com nosso <br/>
-          inovador serviço de PABX Virtual. A chave para o sucesso <br/>
-          dos negócios está na eficiência da comunicação. Com nossa <br/>
-          solução, você terá um sistema robusto que integra chamadas de <br/>
-          voz, mobilidade e gestão avançada, tudo em um único lugar. <br/>
-          Simplifique o atendimento, melhore a mobilidade da equipe e <br/>
-          economize tempo e recursos. Faça a diferença, conecte-se <br/>
-          de forma inteligente e alcance novos patamares com o PABX <br/>
-          Virtual da nossa empresa.</p>
+          <Slide bottom>
+            <h2 className={`primeiroTitle${showForm ? 'blur-text' : ''}`}>Maximize sua eficiência empresarial</h2>
+          </Slide>
+          <Slide bottom>
+            <h2 className={`segundoTitle${showForm ? 'blur-text' : ''}`}>com a telefonia digital!</h2>
+          </Slide>
+          <Slide bottom>
+            <p className={`textoDaCopy${showForm ? 'blur-text' : ''}`}>Potencialize a comunicação da sua empresa com nosso <br/>
+              inovador serviço de PABX Virtual. A chave para o sucesso <br/>
+              dos negócios está na eficiência da comunicação. Com nossa <br/>
+              solução, você terá um sistema robusto que integra chamadas de <br/>
+              voz, mobilidade e gestão avançada, tudo em um único lugar. <br/>
+              Simplifique o atendimento, melhore a mobilidade da equipe e <br/>
+              economize tempo e recursos. Faça a diferença, conecte-se <br/>
+              de forma inteligente e alcance novos patamares com o PABX <br/>
+              Virtual da nossa empresa.</p>
+          </Slide>
         </div>
-      <button className={`buttonNumberOne${showForm ? 'blur-text' : ''}`} onClick={handleContatoClick}>
-        Fale com um especialista
-      </button>
+        <Slide bottom>
+          <button className={`buttonNumberOne${showForm ? 'blur-text' : ''}`} onClick={handleContatoClick}>
+            Fale com um especialista
+          </button>
+        </Slide>
       </div>
-      <img className={`fotoHomem${showForm ? 'blur-text' : ''}`} src={ homemCelular } alt='homem ao celular' />
+      <Slide right>
+        <img className={`fotoHomem${showForm ? 'blur-text' : ''}`} src={homemCelular} alt='homem ao celular' />
+      </Slide>
       </div>
 
       {showForm && (
@@ -169,7 +195,8 @@ function App() {
         </div>
       )}
 
-      <div className={`VideoSection${showForm ? 'blur-text' : ''}`}>
+      <div className={`VideoSection${showForm ? 'blur-text' : ''} ${videoVisible ? 'slide-in' : ''}`}>
+      <div className='botaoVideo'>
         <iframe
           width="560"
           height="315"
@@ -179,50 +206,76 @@ function App() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
+         <Slide left>
+        <button
+          className={`buttonNumberOne${showForm ? 'blur-text' : ''}`}
+          onClick={handleContatoClick}
+        >
+          Fale com um especialista
+        </button>
+      </Slide>
+        </div>
+        <div>
+        </div>
         <div className="VideoTitleContainer">
-          <h1 className={`VideoTitle${showForm ? 'blur-text' : ''}`}>Assista a esse vídeo</h1>
-          <p className={`Videodescricao${showForm ? 'blur-text' : ''}`}>E entenda o porquê o nosso PABX virtual irá <br/> elevar a comunicação da sua empresa a outro nível.</p>
-          <h1 className={`VideoTitle${showForm ? 'blur-text' : ''}`}>Dúvidas?</h1>
-          <p className={`Videodescricao${showForm ? 'blur-text' : ''}`}>Se restar mais alguma dúvida, entre em contato <br/> com nosso time comercial. Estaremos ansiosos em lhe atender.</p>
+          <Slide right>
+            <h1 className={`VideoTitle${showForm ? 'blur-text' : ''}`}>Assista a esse vídeo</h1>
+          </Slide>
+          <Slide right>
+            <p className={`Videodescricao${showForm ? 'blur-text' : ''}`}>E entenda o porquê o nosso PABX virtual irá <br/> elevar a comunicação da sua empresa a outro nível.</p>
+          </Slide>
+          <Slide right>
+            <h1 className={`VideoTitle${showForm ? 'blur-text' : ''}`}>Dúvidas?</h1>
+          </Slide>
+          <Slide right>
+            <p className={`Videodescricao${showForm ? 'blur-text' : ''}`}>Se restar mais alguma dúvida, entre em contato <br/> com nosso time comercial. Estaremos ansiosos em lhe atender.</p>
+          </Slide>
         </div>
       </div>
-
       <div className={`beneficioscompleto${showForm ? 'blur-text' : ''}`}>
-        <h1 className={`BenefitsTitle ${showForm ? 'blur-text' : ''}`}>Benefícios</h1>
+        <Slide bottom>
+          <h1 className={`BenefitsTitle ${showForm ? 'blur-text' : ''}`}>Benefícios</h1>
+        </Slide>
         <div className={`BenefitsContainer ${showForm ? 'blur-background' : ''}`}>
           {benefitsData.map((benefit, index) => (
-            <div className="BenefitCard" key={index}>
-              <div className="CardHeader">
-                <img src={benefit.icon} alt="Ícone de nuvem" className="CardIcon" />
-                <h3 className="CardTitle">{benefit.title}</h3>
+            <Slide bottom key={index}>
+              <div className="BenefitCard">
+                <div className="CardHeader">
+                  <img src={benefit.icon} alt="Ícone de nuvem" className="CardIcon" />
+                  <h3 className="CardTitle">{benefit.title}</h3>
+                </div>
+                <div className="CardContent">
+                  <p className={`descricao${index}`}>{benefit.description}</p>
+                </div>
               </div>
-              <div className="CardContent">
-                <p className={`descricao${index}`}>{benefit.description}</p>
-              </div>
-            </div>
+            </Slide>
           ))}
         </div>
       </div>
 
-      <div>
-        <h1 className={`BenefitsTitle ${showForm ? 'blur-text' : ''}`}>Confira Nossos Planos</h1>
+      <div className='planosContainer'>
+        <Slide bottom>
+          <h1 className={`BenefitsTitle ${showForm ? 'blur-text' : ''}`}>Confira Nossos Planos</h1>
+        </Slide>
         <div className={`PlansContainer${showForm ? 'blur-text' : ''}`}>
           {plansData.map((plan, index) => (
-            <div className="PlanCard" key={index}>
-              <div className="CardHeader">
-                <h3 className="CardTitle">{plan.name}</h3>
-                <p className="PlanPrice">{plan.price}</p>
+            <Slide bottom key={index}>
+              <div className="PlanCard">
+                <div className="CardHeader">
+                  <h3 className="CardTitle">{plan.name}</h3>
+                  <p className="PlanPrice">{plan.price}</p>
+                </div>
+                <div className="CardContent">
+                  <p className={`planodescricao${index}`}>{plan.description}</p>
+                  <h4 className='subtitlePlan'>Benefícios:</h4>
+                  <ul>
+                    {plan.beneficios.map((beneficio, idx) => (
+                      <li key={idx}>{beneficio}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div className="CardContent">
-                <p className={`planodescricao${index}`}>{plan.description}</p>
-                <h4>Benefícios:</h4>
-                <ul>
-                  {plan.beneficios.map((beneficio, idx) => (
-                    <li key={idx}>{beneficio}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            </Slide>
           ))}
         </div>
       </div>
