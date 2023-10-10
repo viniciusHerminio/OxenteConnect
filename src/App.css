@@ -548,6 +548,7 @@ body {
 .textoDaCopy{
   margin-bottom: 30px;
   font-family: 'Nunito', sans-serif;
+  max-width: 400px;
 }
 
 .textoDaCopyblur-text{
@@ -747,6 +748,7 @@ body {
 
   .buttonNumberOne {
     margin-top: 20px; /* Espaço entre o texto e o botão */
+    margin-left: 100px;
   }
 
   .primeiroTitle {
