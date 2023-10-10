@@ -8,6 +8,7 @@ import gestao from './images/gestão.png';
 import homemCelular from './images/homemCelular.jpg';
 import './App.css';
 import { useSpring, animated } from 'react-spring';
+import emailjs from 'emailjs-com'; // Importe 'emailjs-com' em vez de '@emailjs/browser'
 
 const benefitsData = [
   {
@@ -70,6 +71,27 @@ function App() {
     setWhatsapp(formattedValue);
   };
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('gmailMessage', 'template_s0n3fmq', e.target, 'ieaebn5vLF1l8PvsY') // Use e.target para referenciar o formulário
+      .then((result) => {
+        alert('Mensagem enviada com sucesso!');
+        clearFormFields();
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
+  const clearFormFields = () => {
+    document.getElementById('nome').value = '';
+    document.getElementById('email').value = '';
+    setWhatsapp('');
+    document.getElementById('comment').value = '';
+  };
+
   const slideAnimation = useSpring({
     from: { opacity: 0, transform: 'translateX(-50px)' },
     to: { opacity: 1, transform: 'translateX(0)' },
@@ -120,7 +142,9 @@ function App() {
         <img src={logo} className="Logo" alt="Logo" />
         <div className='opHeader'>
           <h5 className={`contato ${showForm ? 'blur-text' : ''}`} onClick={handleContatoClick}>Contato</h5>
-          <h5 className='plano'>Planos</h5>
+          <h5 className='plano'>
+            <a href="#planos">Planos</a>
+            </h5>
         </div>
       </div>
 
@@ -155,38 +179,40 @@ function App() {
             &#x2715;
           </div>
           <h2 className="FormTitle">Preencha seus dados de contato:</h2>
-          <form className="Form">
-            <div className="FormField">
-              <label htmlFor="nome">Nome completo:</label>
-              <input type="text" id="nome" name="nome" required placeholder="Seu Nome Completo" />
-            </div>
+          <form className="Form" id='gmailMessage' onSubmit={sendEmail}>
+  <div className="FormField">
+    <label htmlFor="nome">Nome completo:</label>
+    <input type="text" id="nome" name="nome" required placeholder="Seu Nome Completo" />
+  </div>
 
-            <div className="FormField">
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" required placeholder="email@email.email" />
-            </div>
+  <div className="FormField">
+    <label htmlFor="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="email@email.email" />
+  </div>
 
-            <div className="FormField">
-              <label htmlFor="whatsapp">WhatsApp:</label>
-              <input
-                type="tel"
-                id="whatsapp"
-                name="whatsapp"
-                value={whatsapp}
-                onChange={handleWhatsappChange}
-                placeholder="(XX) XXXXX-XXXX"
-                maxLength="15"
-                required
-              />
-            </div>
+  <div className="FormField">
+    <label htmlFor="whatsapp">WhatsApp:</label>
+    <input
+      type="tel"
+      id="whatsapp"
+      name="whatsapp"
+      value={whatsapp}
+      onChange={handleWhatsappChange}
+      placeholder="(XX) XXXXX-XXXX"
+      maxLength="15"
+      required
+    />
+  </div>
 
-            <div className="FormField">
-              <label htmlFor="mensagem">Mensagem:</label>
-              <textarea className='text' placeholder='Deixe sua mensagem que entraremos em contato o mais breve possível!' rows="4" cols="50" name="comment" form="usrform"/>
-            </div>
+  <div className="FormField">
+    <label htmlFor="comment">Mensagem:</label>
+    <textarea className='text' placeholder='Deixe sua mensagem que entraremos em contato o mais breve possível!' rows="4" cols="50" id="comment" name="comment" form="gmailMessage"/>
+  </div>
 
-            <animated.button style={slideAnimation} type="submit" className="SubmitButton">Enviar</animated.button>
-          </form>
+  <animated.button style={slideAnimation} type="submit" className="SubmitButton">
+    Enviar
+  </animated.button>
+</form>
         </div>
       )}
 
@@ -235,7 +261,7 @@ function App() {
         </div>
       </div>
 
-      <div className='planosContainer'>
+      <div id="planos" className='planosContainer'>
         <animated.h1 style={slideAnimation} className={`BenefitsTitle ${showForm ? 'blur-text' : ''}`}>Confira Nossos Planos</animated.h1>
         <div className={`PlansContainer${showForm ? 'blur-text' : ''}`}>
           {plansData.map((plan, index) => (
@@ -252,7 +278,7 @@ function App() {
                     <li key={idx}>{beneficio}</li>
                   ))}
                 </ul>
-                <button className={`ButtonSpecialist ${showForm ? 'blur-text' : ''}`} onClick={handleContatoClick}>
+                <button className={`ButtonSpecialist${showForm ? 'blur-text' : ''}`} onClick={handleContatoClick}>
                   Fale com um especialista
                 </button>
               </div>

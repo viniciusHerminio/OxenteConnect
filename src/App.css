@@ -110,16 +110,20 @@ body {
 .SubmitButton {
   display: block;
   margin: 0 auto;
-  background-color: orangered;
+  background-color: #e65100;
   color: white;
-  padding: 10px 30px;
+  padding: 12px 30px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: 'Nunito', sans-serif;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .SubmitButton:hover {
-  background-color: orangered;
+  background-color: #ff6f00; /* Cor de destaque ao passar o mouse */
 }
 
 .Banner.blur-background {
@@ -143,21 +147,19 @@ body {
 /* Adicione um background agradável para a área dos benefícios */
 .BenefitsContainer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  padding: 10px;
-  flex-wrap: wrap;
+  padding: 20px;
   background-color: #f7f7f7;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   backdrop-filter: blur(10px);
 }
 
 /* Ajuste o estilo da descrição dos benefícios */
-.BenefitCard .CardContent {
-  color: #555;
-}
+
 
 .BenefitCard {
   background: #fff;
@@ -221,6 +223,7 @@ body {
   right: 10px;
   font-size: 1.5em;
   cursor: pointer;
+  color: #e65100;
 }
 
 .descricao0 {
@@ -315,6 +318,17 @@ body {
   transform: translateY(0);
 }
 
+.plano a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit; /* Mantém a cor padrão do texto */
+}
+
+/* Estilo para o link "Planos" quando estiver em :visited */
+.plano a:visited {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit; /* Mantém a cor padrão do texto */
+}
+
 .CardTitle {
   color: #e65100;
   font-weight: bold;
@@ -349,6 +363,14 @@ body {
   margin-top: 10px; /* Espaçamento acima dos benefícios */
 }
 
+.SuccessMessage {
+  text-align: center;
+  margin-top: 20px;
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 .ButtonSpecialist {
   background-color: #e65100;
   color: white;
@@ -364,6 +386,19 @@ body {
 
 .ButtonSpecialist:hover {
   background-color: #ff6f00; /* Cor de destaque ao passar o mouse */
+}
+
+.ButtonSpecialistblur-text{
+  background-color: #e65100;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 20px; /* Espaçamento acima do botão */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+  font-family: 'Nunito', sans-serif;
 }
 
 .PlansContainer {
@@ -468,11 +503,12 @@ body {
 
 .buttonNumberOneblur-text {
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 18px;
+  height: 50px;
+  font-size: 16px;
+  padding: 10px 20px;
   font-weight: bold;
   color: white;
-  background-color: orange;
+  background-color: #e65100;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -573,28 +609,57 @@ body {
   }
 
   .FormContainer {
-    max-width: 100%;
-    padding: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .FormTitle {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e65100;
     font-size: 1.5em;
     font-family: 'Nunito', sans-serif;
   }
 
-  .FormField label {
-    font-size: 14px;
-    font-family: 'Nunito', sans-serif;
+  .FormField {
+    margin-bottom: 20px;
   }
-
+  
+  .FormField label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
   .FormField input[type="text"],
   .FormField input[type="email"],
   .FormField input[type="tel"],
   .FormField textarea {
-  width: 100%;
-  font-size: 14px;
-  padding: 8px;
-}
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Nunito', sans-serif;
+    transition: border-color 0.3s ease;
+  }
+  
+  .FormField input[type="text"]:focus,
+  .FormField input[type="email"]:focus,
+  .FormField input[type="tel"]:focus,
+  .FormField textarea:focus {
+    border-color: #e65100;
+  }
 
 .BenefitCard,
 .PlanCard {
