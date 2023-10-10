@@ -732,21 +732,23 @@ body {
   }
 
   .buttonNumberOneContainer {
-    max-width: 600px; /* Ajuste a largura máxima conforme necessário */
+    max-width: 80%; /* Ajuste a largura máxima conforme necessário */
   }
-  
+
   .textoBotao {
     text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 20px; /* Espaço entre o texto e o botão */
   }
-  
+
   .textoBotao .textoCopy {
     text-align: left; /* Alinha o texto à esquerda */
-    margin-bottom: 20px; /* Espaço entre o texto e o botão */
-    margin-left: 100px;
   }
 
   .buttonNumberOne {
     margin-top: 20px; /* Espaço entre o texto e o botão */
-    margin-left: 100px;
+  }
+
+  .primeiroTitle {
+    margin-top: 200px;
   }
 }
