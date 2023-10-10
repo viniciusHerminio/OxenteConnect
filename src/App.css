@@ -703,4 +703,22 @@ body {
   .fotoHomem {
     display: none;
   }
+
+  .PlansContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .PlanCard {
+    max-width: 100%;
+  }
+
+  .BenefitsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BenefitCard {
+    max-width: 100%;
+  }
 }
