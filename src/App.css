@@ -732,7 +732,7 @@ body {
   }
 
   .buttonNumberOneContainer {
-    max-width: 80%; /* Ajuste a largura máxima conforme necessário */
+    max-width: 100%; /* Ajuste a largura máxima conforme necessário */
   }
 
   .textoBotao {
