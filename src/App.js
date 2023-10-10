@@ -151,28 +151,29 @@ function App() {
       {showForm && <div className="blur-overlay"></div>}
 
       <img className={`Banner ${showForm ? 'blur-background' : ''}`} src={Banner} alt='Banner' />
-      <div className='buttonNumberOneContainer'>
-        <div className='textoBotao'>
-          <div className='textoCopy'>
-            <animated.h2 style={slideAnimation} className={`primeiroTitle${showForm ? 'blur-text' : ''}`}>Maximize sua eficiência empresarial</animated.h2>
-            <animated.h2 style={slideAnimation} className={`segundoTitle${showForm ? 'blur-text' : ''}`}>com a telefonia digital!</animated.h2>
-            <animated.p style={slideAnimation} className={`textoDaCopy${showForm ? 'blur-text' : ''}`}>Potencialize a comunicação da sua empresa com nosso <br/>
-              inovador serviço de PABX Virtual. A chave para o sucesso <br/>
-              dos negócios está na eficiência da comunicação. Com nossa <br/>
-              solução, você terá um sistema robusto que integra chamadas de <br/>
-              voz, mobilidade e gestão avançada, tudo em um único lugar. <br/>
-              Simplifique o atendimento, melhore a mobilidade da equipe e <br/>
-              economize tempo e recursos. Faça a diferença, conecte-se <br/>
-              de forma inteligente e alcance novos patamares com o PABX <br/>
-              Virtual da nossa empresa.</animated.p>
-          </div>
-          <animated.button style={slideAnimation} className={`buttonNumberOne${showForm ? 'blur-text' : ''}`} onClick={handleContatoClick}>
-            Fale com um especialista
-          </animated.button>
-        </div>
-        <animated.img style={slideAnimation} className={`fotoHomem${showForm ? 'blur-text' : ''}`} src={homemCelular} alt='homem ao celular' />
+      <div className='MobileContent'>
+  <div className='buttonNumberOneContainer'>
+    <div className='textoBotao'>
+      <div className='textoCopy'>
+        <animated.h2 style={slideAnimation} className={`primeiroTitle${showForm ? 'blur-text' : ''}`}>Maximize sua eficiência empresarial</animated.h2>
+        <animated.h2 style={slideAnimation} className={`segundoTitle${showForm ? 'blur-text' : ''}`}>com a telefonia digital!</animated.h2>
+        <animated.p style={slideAnimation} className={`textoDaCopy${showForm ? 'blur-text' : ''}`}>Potencialize a comunicação da sua empresa com nosso <br/>
+          inovador serviço de PABX Virtual. A chave para o sucesso <br/>
+          dos negócios está na eficiência da comunicação. Com nossa <br/>
+          solução, você terá um sistema robusto que integra chamadas de <br/>
+          voz, mobilidade e gestão avançada, tudo em um único lugar. <br/>
+          Simplifique o atendimento, melhore a mobilidade da equipe e <br/>
+          economize tempo e recursos. Faça a diferença, conecte-se <br/>
+          de forma inteligente e alcance novos patamares com o PABX <br/>
+          Virtual da nossa empresa.</animated.p>
       </div>
-
+      <animated.button style={slideAnimation} className={`buttonNumberOne${showForm ? 'blur-text' : ''}`} onClick={handleContatoClick}>
+        Fale com um especialista
+      </animated.button>
+    </div>
+    <animated.img style={slideAnimation} className={`fotoHomem${showForm ? 'blur-text' : ''}`} src={homemCelular} alt='homem ao celular' />
+  </div>
+</div>
       {showForm && (
         <div className={`FormContainer show`}>
           <div className="CloseIcon" onClick={handleToggleForm}>

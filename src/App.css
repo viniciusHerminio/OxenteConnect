@@ -721,4 +721,32 @@ body {
   .BenefitCard {
     max-width: 100%;
   }
+
+  .MobileContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .buttonNumberOneContainer {
+    max-width: 600px; /* Ajuste a largura máxima conforme necessário */
+  }
+  
+  .textoBotao {
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+  
+  .textoBotao .textoCopy {
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 20px; /* Espaço entre o texto e o botão */
+    margin-left: 100px;
+  }
+
+  .buttonNumberOne {
+    margin-top: 20px; /* Espaço entre o texto e o botão */
+    margin-left: 100px;
+  }
 }
