@@ -167,9 +167,11 @@ function App() {
           de forma inteligente e alcance novos patamares com o PABX
           Virtual da nossa empresa.</animated.p>
       </div>
+      <div className='primeiroBotao'>
       <animated.button style={slideAnimation} className={`buttonNumberOne${showForm ? 'blur-text' : ''}`} onClick={handleContatoClick}>
         Fale com um especialista
       </animated.button>
+      </div>
     </div>
     <animated.img style={slideAnimation} className={`fotoHomem${showForm ? 'blur-text' : ''}`} src={homemCelular} alt='homem ao celular' />
   </div>
