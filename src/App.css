@@ -749,6 +749,7 @@ body {
   .buttonNumberOne {
     margin-top: 20px; /* Espaço entre o texto e o botão */
     margin-left: 100px;
+    padding: 30px;
   }
 
   .primeiroTitle {
