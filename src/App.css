@@ -742,6 +742,7 @@ body {
 
   .textoBotao .textoCopy {
     text-align: left; /* Alinha o texto à esquerda */
+    margin-left: 100px;
   }
 
   .buttonNumberOne {
