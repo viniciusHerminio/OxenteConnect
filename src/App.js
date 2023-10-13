@@ -9,6 +9,7 @@ import homemCelular from './images/homemCelular.jpg';
 import './App.css';
 import { useSpring, animated } from 'react-spring';
 import emailjs from 'emailjs-com'; // Importe 'emailjs-com' em vez de '@emailjs/browser'
+import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 
 const benefitsData = [
   {
@@ -58,6 +59,30 @@ function App() {
   const [showForm, setShowForm] = useState(false);
   const [whatsapp, setWhatsapp] = useState('');
   const [videoVisible, setVideoVisible] = useState(false);
+
+  const [faqData, setFAQData] = useState([
+    {
+      question: 'Como faço para contratar o PABX Virtual?',
+      answer: 'Para contratar o PABX Virtual, entre em contato conosco através do formulário de contato ou ligue para o nosso suporte. Nossa equipe terá prazer em lhe ajudar a escolher o plano certo para o seu negócio.',
+      open: false,
+    },
+    {
+      question: 'Quais são os benefícios do PABX Virtual?',
+      answer: 'O PABX Virtual oferece integração com provedor de internet, mobilidade e flexibilidade, economia de custos e recursos avançados de gestão e monitoramento em tempo real. Esses benefícios podem melhorar a eficiência da comunicação da sua empresa.',
+      open: false,
+    },
+    {
+      question: 'Quais planos estão disponíveis?',
+      answer: 'Oferecemos três planos: Básico, Padrão e Avançado. Cada plano atende a diferentes necessidades e orçamentos. Você pode encontrar mais informações sobre cada plano na seção de "Planos".',
+      open: false,
+    },
+  ]);
+
+  const toggleFAQ = (index) => {
+    const updatedFAQData = [...faqData];
+    updatedFAQData[index].open = !updatedFAQData[index].open;
+    setFAQData(updatedFAQData);
+  }
 
   const handleContatoClick = () => {
     setShowForm(!showForm);
@@ -289,6 +314,26 @@ function App() {
           ))}
         </div>
       </div>
+      <div className={`FAQSection ${showForm ? 'blur-text' : ''}`}>
+  <h1 className="FAQTitle">Perguntas Frequentes</h1>
+  <div className={`FAQContainer ${showForm ? 'blur-background' : ''}`}>
+  {faqData.map((faqItem, index) => (
+  <div className="FAQItem" key={index}>
+    <div className="FAQQuestion">
+      <h3 className="FAQQuestionText">{faqItem.question}</h3>
+      <div className="QuestionToggle" onClick={() => toggleFAQ(index)}>
+        {faqItem.open ? <AiFillMinusCircle /> : <AiFillPlusCircle />}
+      </div>
+    </div>
+    {faqItem.open && (
+      <div className="FAQAnswer">
+        <p className="FAQAnswerText">{faqItem.answer}</p>
+      </div>
+    )}
+  </div>
+))}
+  </div>
+</div>
       <footer className="Rodape">
         <p>Todos os direitos reservados &copy; {new Date().getFullYear()} Oxente Net</p>
       </footer>

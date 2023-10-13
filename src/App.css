@@ -599,6 +599,86 @@ body {
   margin: 0; /* Remova a margem padrão para evitar espaço em branco extra */
 }
 
+.FAQSection {
+  background-color: #f9f9f9; /* Cor de fundo da seção FAQ */
+  padding: 50px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.FAQTitle {
+  font-family: 'Arial', sans-serif;
+  color: #e65100;
+  font-size: 2em;
+  font-family: 'Nunito', sans-serif;
+}
+
+.FAQContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.FAQCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(50px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  opacity: 0;
+}
+
+.FAQCard .in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.FAQCard .Question {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2em;
+  color: #e65100;
+}
+
+.FAQCard .Answer {
+  font-family: 'Nunito', sans-serif;
+  margin-top: 10px;
+}
+
+.FAQCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.FAQQuestion {
+  display: flex; /* Adicione um display flex para alinhar ícone e texto lado a lado */
+  justify-content: center;
+  align-items: center; /* Alinha verticalmente o ícone e o texto ao centro */
+  padding: 10px 0; /* Adicione algum espaço ao redor do ícone e do texto */
+}
+
+.QuestionToggle {
+  cursor: pointer;
+}
+
+.FAQQuestionText {
+  margin: 0; /* Remova as margens padrão do h3 */
+  margin-right: 10px;
+}
+
 
 @media (max-width: 600px) {
   .opHeader .plano {
@@ -607,6 +687,14 @@ body {
 
   .opHeader h5 {
     margin: 10px 0;
+  }
+
+  .FAQSection {
+    padding: 20px;
+  }
+
+  .FAQTitle {
+    font-size: 1.5em;
   }
 
   .FormContainer {
