@@ -9,7 +9,7 @@ import homemCelular from './images/homemCelular.jpg';
 import './App.css';
 import { useSpring, animated } from 'react-spring';
 import emailjs from 'emailjs-com'; // Importe 'emailjs-com' em vez de '@emailjs/browser'
-import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
+import { AiOutlinePlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 
 const benefitsData = [
   {
@@ -76,13 +76,28 @@ function App() {
       answer: 'Oferecemos três planos: Básico, Padrão e Avançado. Cada plano atende a diferentes necessidades e orçamentos. Você pode encontrar mais informações sobre cada plano na seção de "Planos".',
       open: false,
     },
+    {
+      question: 'É fácil migrar para o PABX Virtual?',
+      answer: 'Sim, a migração para o PABX Virtual é geralmente um processo relativamente simples. Nossa equipe de suporte está pronta para ajudá-lo em todas as etapas do processo. O primeiro passo é entrar em contato conosco para discutir suas necessidades e receber orientações personalizadas. Em seguida, configuraremos o sistema de acordo com suas especificações. Depois de concluída a configuração, forneceremos suporte e treinamento para garantir que sua equipe esteja confortável com a nova solução. Estamos comprometidos em tornar a migração para o PABX Virtual o mais tranquila possível para sua empresa.".',
+      open: false,
+    },
+    {
+      question: 'O PABX Virtual é seguro para uso na minha empresa?',
+      answer: 'Sim, o PABX Virtual é uma solução segura para comunicações empresariais. Ele é projetado com medidas de segurança avançadas para proteger suas chamadas e dados. A integração com provedores de internet de alta qualidade também ajuda a garantir a segurança e a qualidade das chamadas. Além disso, oferecemos suporte técnico para manter o sistema seguro e atualizado, garantindo a tranquilidade dos usuários.".',
+      open: false,
+    },
+    {
+      question: 'Como funcionam as chamadas de longa distância com o PABX Virtual?',
+      answer: 'O PABX Virtual permite chamadas de longa distância de forma econômica. Ele utiliza tecnologia VoIP (Voz sobre IP), que permite fazer chamadas pela internet, reduzindo significativamente os custos em comparação com chamadas tradicionais. Você pode fazer chamadas de longa distância para clientes, parceiros e funcionários em todo o mundo a preços muito mais acessíveis, melhorando a comunicação global da sua empresa.".',
+      open: false,
+    },
   ]);
 
   const toggleFAQ = (index) => {
     const updatedFAQData = [...faqData];
     updatedFAQData[index].open = !updatedFAQData[index].open;
     setFAQData(updatedFAQData);
-  }
+  };
 
   const handleContatoClick = () => {
     setShowForm(!showForm);
@@ -314,26 +329,24 @@ function App() {
           ))}
         </div>
       </div>
-      <div className={`FAQSection ${showForm ? 'blur-text' : ''}`}>
-  <h1 className="FAQTitle">Perguntas Frequentes</h1>
-  <div className={`FAQContainer ${showForm ? 'blur-background' : ''}`}>
+      <div className={`FAQSection${showForm ? 'blur-text' : ''}`}>
+        <h1 className="FAQTitle">Perguntas Frequentes</h1>
+        <div className={`FAQContainer${showForm ? 'blur-background' : ''}`}>
   {faqData.map((faqItem, index) => (
-  <div className="FAQItem" key={index}>
-    <div className="FAQQuestion">
-      <h3 className="FAQQuestionText">{faqItem.question}</h3>
-      <div className="QuestionToggle" onClick={() => toggleFAQ(index)}>
-        {faqItem.open ? <AiFillMinusCircle /> : <AiFillPlusCircle />}
+    <div className="FAQItem" key={index}>
+      <div className="FAQQuestion">
+        <h3 className="FAQQuestionText">{faqItem.question}</h3>
+        <div className="QuestionToggle" onClick={() => toggleFAQ(index)}>
+          {faqItem.open ? <AiFillMinusCircle /> : <AiOutlinePlusCircle />}
+        </div>
       </div>
-    </div>
-    {faqItem.open && (
-      <div className="FAQAnswer">
+      <div className={`FAQAnswer ${faqItem.open ? 'open' : ''}`}>
         <p className="FAQAnswerText">{faqItem.answer}</p>
       </div>
-    )}
-  </div>
-))}
-  </div>
+    </div>
+  ))}
 </div>
+      </div>
       <footer className="Rodape">
         <p>Todos os direitos reservados &copy; {new Date().getFullYear()} Oxente Net</p>
       </footer>
