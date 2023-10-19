@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import logo from './images/logoOxente.png';
 import Banner from './images/bannerSite.png';
+import HomeOffice from './images/homeOffice Banner Site.png';
+import AtendimentoUnificado from './images/atendimento ao cliente aprimorado banner2 site.png';
+import Banner3 from './images/banner3Site.png';
 import nuvem from './images/nuvem.png';
 import mobilidade from './images/mobilidade.png';
 import financeiro from './images/financeiro.png';
@@ -31,27 +34,6 @@ const benefitsData = [
     icon: gestao,
     title: 'Gestão e Monitoramento Avançados',
     description: 'Oferece recursos avançados de gestão e monitoramento em tempo real, possibilitando um controle mais eficaz das chamadas, o que contribui para melhorar a eficiência da comunicação empresarial.'
-  }
-];
-
-const plansData = [
-  {
-    name: 'Plano Básico',
-    price: '$29.99/mês',
-    description: 'Ideal para pequenos negócios que estão começando.',
-    beneficios: ['Benefício 1', 'Benefício 2', 'Benefício 3', 'Benefício 4', 'Benefício 5']
-  },
-  {
-    name: 'Plano Padrão',
-    price: '$49.99/mês',
-    description: 'Ótima opção para negócios em crescimento com necessidades mais avançadas.',
-    beneficios: ['Benefício 1', 'Benefício 2', 'Benefício 3', 'Benefício 4', 'Benefício 5']
-  },
-  {
-    name: 'Plano Avançado',
-    price: '$79.99/mês',
-    description: 'Para negócios estabelecidos que exigem funcionalidades avançadas e suporte dedicado.',
-    beneficios: ['Benefício 1', 'Benefício 2', 'Benefício 3', 'Benefício 4', 'Benefício 5']
   }
 ];
 
@@ -195,17 +177,15 @@ function App() {
   <div className='buttonNumberOneContainer'>
     <div className='textoBotao'>
       <div className='textoCopy'>
-        <animated.h2 style={slideAnimation} className={`primeiroTitle${showForm ? 'blur-text' : ''}`}>Maximize sua eficiência empresarial</animated.h2>
-        <animated.h2 style={slideAnimation} className={`segundoTitle${showForm ? 'blur-text' : ''}`}>com a telefonia digital!</animated.h2>
-        <animated.p style={slideAnimation} className={`textoDaCopy${showForm ? 'blur-text' : ''}`}>Potencialize a comunicação da sua empresa com nosso
-          inovador serviço de PABX Virtual. A chave para o sucesso 
-          dos negócios está na eficiência da comunicação. Com nossa 
-          solução, você terá um sistema robusto que integra chamadas de
-          voz, mobilidade e gestão avançada, tudo em um único lugar. 
-          Simplifique o atendimento, melhore a mobilidade da equipe e
-          economize tempo e recursos. Faça a diferença, conecte-se 
-          de forma inteligente e alcance novos patamares com o PABX
-          Virtual da nossa empresa.</animated.p>
+        <animated.h2 style={slideAnimation} className={`primeiroTitle${showForm ? 'blur-text' : ''}`}>O que é o PABX Virtual?</animated.h2>
+        <animated.p style={slideAnimation} className={`textoDaCopy${showForm ? 'blur-text' : ''}`}>
+        O PABX Virtual, também conhecido como PBX em nuvem,
+        é uma evolução do sistema de PABX tradicional. Em vez
+        de hardware físico, ele é baseado na nuvem, o que
+        significa que as chamadas são feitas pela internet. O
+        PABX Virtual oferece uma série de vantagens em
+        comparação com seu antecessor.
+        </animated.p>
       </div>
       <div className='primeiroBotao'>
       <animated.button style={slideAnimation} className={`buttonNumberOne${showForm ? 'blur-text' : ''}`} onClick={handleContatoClick}>
@@ -303,35 +283,12 @@ function App() {
           ))}
         </div>
       </div>
-
-      <div id="planos" className='planosContainer'>
-        <animated.h1 style={slideAnimation} className={`BenefitsTitle ${showForm ? 'blur-text' : ''}`}>Confira Nossos Planos</animated.h1>
-        <div className={`PlansContainer${showForm ? 'blur-text' : ''}`}>
-          {plansData.map((plan, index) => (
-            <div className="PlanCard" key={index}>
-              <div className="CardHeader">
-                <h3 className="CardTitle">{plan.name}</h3>
-                <p className="PlanPrice">{plan.price}</p>
-              </div>
-              <div className="CardContent">
-                <p className={`planodescricao${index}`}>{plan.description}</p>
-                <h4 className='subtitlePlan'>Benefícios:</h4>
-                <ul>
-                  {plan.beneficios.map((beneficio, idx) => (
-                    <li key={idx}>{beneficio}</li>
-                  ))}
-                </ul>
-                <button className={`ButtonSpecialist${showForm ? 'blur-text' : ''}`} onClick={handleContatoClick}>
-                  Fale com um especialista
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <img className={`BannerMeio ${showForm ? 'blur-background' : ''}`} src={HomeOffice} alt='BannerHomeOffice' />
+      <img className={`BannerMeio ${showForm ? 'blur-background' : ''}`} src={AtendimentoUnificado} alt='BannerAtendimentoUnificado' />
+      <img className={`BannerMeio ${showForm ? 'blur-background' : ''}`} src={Banner3} alt='Banner3' />
       <div className={`FAQSection${showForm ? 'blur-text' : ''}`}>
         <h1 className="FAQTitle">Perguntas Frequentes</h1>
-        <div className={`FAQContainer${showForm ? 'blur-background' : ''}`}>
+        <div className={`FAQContainer ${showForm ? 'blur-background' : ''}`}>
   {faqData.map((faqItem, index) => (
     <div className="FAQItem" key={index}>
       <div className="FAQQuestion">
