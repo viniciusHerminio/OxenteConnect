@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from './images/logoOxente.png';
 import Banner from './images/bannerSite.png';
-import HomeOffice from './images/homeOffice Banner Site.png';
-import AtendimentoUnificado from './images/atendimento ao cliente aprimorado banner2 site.png';
-import Banner3 from './images/banner3Site.png';
 import nuvem from './images/nuvem.png';
 import mobilidade from './images/mobilidade.png';
 import financeiro from './images/financeiro.png';
@@ -54,8 +51,8 @@ function App() {
       open: false,
     },
     {
-      question: 'Quais planos estão disponíveis?',
-      answer: 'Oferecemos três planos: Básico, Padrão e Avançado. Cada plano atende a diferentes necessidades e orçamentos. Você pode encontrar mais informações sobre cada plano na seção de "Planos".',
+      question: 'O PABX Virtual é compatível com dispositivos móveis?',
+      answer: 'Sim, o PABX Virtual é compatível com uma variedade de dispositivos, incluindo smartphones, proporcionando flexibilidade de uso.',
       open: false,
     },
     {
@@ -283,9 +280,6 @@ function App() {
           ))}
         </div>
       </div>
-      <img className={`BannerMeio ${showForm ? 'blur-background' : ''}`} src={HomeOffice} alt='BannerHomeOffice' />
-      <img className={`BannerMeio ${showForm ? 'blur-background' : ''}`} src={AtendimentoUnificado} alt='BannerAtendimentoUnificado' />
-      <img className={`BannerMeio ${showForm ? 'blur-background' : ''}`} src={Banner3} alt='Banner3' />
       <div className={`FAQSection${showForm ? 'blur-text' : ''}`}>
         <h1 className="FAQTitle">Perguntas Frequentes</h1>
         <div className={`FAQContainer ${showForm ? 'blur-background' : ''}`}>
