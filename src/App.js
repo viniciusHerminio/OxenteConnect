@@ -297,6 +297,15 @@ function App() {
     </div>
   ))}
 </div>
+    </div>
+    <div className="OpenFormButtonContainer">
+        <animated.button
+          style={slideAnimation}
+          className={`buttonNumberOne${showForm ? 'blur-text' : ''}`}
+          onClick={handleToggleForm}
+        >
+          Fale com um Especialista
+        </animated.button>
       </div>
       <footer className="Rodape">
         <p>Todos os direitos reservados &copy; {new Date().getFullYear()} Oxente Net</p>
