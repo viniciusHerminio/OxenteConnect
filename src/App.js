@@ -56,18 +56,18 @@ function App() {
       open: false,
     },
     {
-      question: 'É fácil migrar para o PABX Virtual?',
-      answer: 'Sim, a migração para o PABX Virtual é geralmente um processo relativamente simples. Nossa equipe de suporte está pronta para ajudá-lo em todas as etapas do processo. O primeiro passo é entrar em contato conosco para discutir suas necessidades e receber orientações personalizadas. Em seguida, configuraremos o sistema de acordo com suas especificações. Depois de concluída a configuração, forneceremos suporte e treinamento para garantir que sua equipe esteja confortável com a nova solução. Estamos comprometidos em tornar a migração para o PABX Virtual o mais tranquila possível para sua empresa.".',
+      question: 'É Fácil a instalação??',
+      answer: 'Com o PABX Virtual da Oxente.net, a instalação é rápida, fácil e descomplicada. Eliminamos equipamentos volumosos e configurações complexas, permitindo que sua empresa desfrute de uma comunicação eficiente em poucos passos.',
       open: false,
     },
     {
       question: 'O PABX Virtual é seguro para uso na minha empresa?',
-      answer: 'Sim, o PABX Virtual é uma solução segura para comunicações empresariais. Ele é projetado com medidas de segurança avançadas para proteger suas chamadas e dados. A integração com provedores de internet de alta qualidade também ajuda a garantir a segurança e a qualidade das chamadas. Além disso, oferecemos suporte técnico para manter o sistema seguro e atualizado, garantindo a tranquilidade dos usuários.".',
+      answer: 'Sim, o PABX Virtual é uma solução segura para comunicações empresariais. Ele é projetado com medidas de segurança avançadas para proteger suas chamadas e dados. A integração com nosso provedor de internet de alta qualidade também ajuda a garantir a segurança e a qualidade das chamadas. Além disso, oferecemos suporte técnico para manter o sistema seguro e atualizado, garantindo a tranquilidade dos usuários.".',
       open: false,
     },
     {
-      question: 'Como funcionam as chamadas de longa distância com o PABX Virtual?',
-      answer: 'O PABX Virtual permite chamadas de longa distância de forma econômica. Ele utiliza tecnologia VoIP (Voz sobre IP), que permite fazer chamadas pela internet, reduzindo significativamente os custos em comparação com chamadas tradicionais. Você pode fazer chamadas de longa distância para clientes, parceiros e funcionários em todo o mundo a preços muito mais acessíveis, melhorando a comunicação global da sua empresa.".',
+      question: 'Tenho um contato que utilizo a anos, consigo integrar ele ao PABX virtual?',
+      answer: 'Sim, é possível integrar seus contatos antigos ao PABX virtual da Oxente.net. Oferecemos planos com minutagem e, se necessário, utilizamos uma chipeira para vincular chips não vinculados à operadora ao PABX Virtual. Também podemos integrar números fixos aos ramais, assegurando uma transição suave para uma comunicação empresarial moderna, sem perder nenhum contato.',
       open: false,
     },
   ]);
@@ -307,7 +307,7 @@ function App() {
           Fale com um Especialista
         </animated.button>
       </div>
-      <footer className="Rodape">
+      <footer className={`Rodape${showForm ? 'blur-text' : ''}`}>
         <p>Todos os direitos reservados &copy; {new Date().getFullYear()} Oxente Net</p>
       </footer>
     </div>
