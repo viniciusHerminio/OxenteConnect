@@ -285,9 +285,9 @@ function App() {
         <div className={`FAQContainer ${showForm ? 'blur-background' : ''}`}>
   {faqData.map((faqItem, index) => (
     <div className="FAQItem" key={index}>
-      <div className="FAQQuestion">
+      <div className="FAQQuestion" onClick={() => toggleFAQ(index)}>
         <h3 className="FAQQuestionText">{faqItem.question}</h3>
-        <div className="QuestionToggle" onClick={() => toggleFAQ(index)}>
+        <div className="QuestionToggle">
           {faqItem.open ? <AiFillMinusCircle /> : <AiOutlinePlusCircle />}
         </div>
       </div>
