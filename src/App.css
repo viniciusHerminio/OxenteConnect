@@ -505,6 +505,7 @@ body {
 .buttonNumberOne {
   display: inline-block;
   height: 50px;
+  width: 100%;
   font-size: 16px;
   padding: 10px 20px;
   font-weight: bold;
@@ -861,6 +862,7 @@ body {
     display: flex;
     max-width: 100%; /* Ajuste a largura máxima conforme necessário */
     justify-content: center;
+    width: 100%;
     align-items: center;
     margin-top: 200px;
     margin-bottom: 250px;
