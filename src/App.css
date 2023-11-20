@@ -601,6 +601,7 @@ body {
 .botaoVideo {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
@@ -749,6 +750,20 @@ body {
 
 
 @media (max-width: 600px) {
+
+  .BotaoVideo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* ou o valor desejado para ajustar a distância do vídeo */
+  }
+
+  .VideoTitleContainer {
+    margin-left: 0; /* ou o valor desejado para centralizar */
+    margin-top: 20px; /* ou o valor desejado para afastar do vídeo */
+    text-align: center; /* para centralizar o texto no mobile */
+  }
+
   .opHeader .plano {
     margin-left: 20px;
   }
@@ -830,6 +845,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-top: 100px;
     opacity: 0;
     transform: translateY(20px);
@@ -843,7 +859,7 @@ body {
 
   .buttonNumberOneContainer {
     display: flex;
-    
+    max-width: 100%; /* Ajuste a largura máxima conforme necessário */
     justify-content: center;
     align-items: center;
     margin-top: 200px;
@@ -880,11 +896,7 @@ body {
     height: 100vh;
     text-align: center;
   }
-
-  .buttonNumberOneContainer {
-    max-width: 100%; /* Ajuste a largura máxima conforme necessário */
-  }
-
+  
   .textoBotao {
     text-align: left; /* Alinha o texto à esquerda */
     margin-bottom: 20px; /* Espaço entre o texto e o botão */
