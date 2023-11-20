@@ -301,7 +301,7 @@ function App() {
     <div className="OpenFormButtonContainer">
         <animated.button
           style={slideAnimation}
-          className={`buttonNumberOne${showForm ? 'blur-text' : ''}`}
+          className={`buttonNumberTwo${showForm ? 'blur-text' : ''}`}
           onClick={handleToggleForm}
         >
           Fale com um Especialista
