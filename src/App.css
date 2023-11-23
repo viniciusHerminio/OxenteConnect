@@ -647,13 +647,23 @@ body {
   margin-top: 20px;
 }
 
+.info {
+  margin-right: 100px;
+}
+
+.info a {
+  color: white;
+}
+
 .Rodape {
-  background-color: #33333398; /* Cor de fundo do rodapé */
-  color: #fff; /* Cor do texto */
+  background-color: #e65100; /* Cor de fundo do rodapé */
+  color: #ffffff; /* Cor do texto */
   text-align: center; /* Centralizar o texto */
   margin-top: 50px;
-  padding: 10px;
+  padding: 30px;
   font-size: 12px;
+  display: flex;
+  justify-content: center;
 }
 
 .Rodapeblur-text {

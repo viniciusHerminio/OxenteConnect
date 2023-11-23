@@ -9,7 +9,8 @@ import homemCelular from './images/homemCelular.jpg';
 import './App.css';
 import { useSpring, animated } from 'react-spring';
 import emailjs from 'emailjs-com'; // Importe 'emailjs-com' em vez de '@emailjs/browser'
-import { AiOutlinePlusCircle, AiFillMinusCircle } from 'react-icons/ai';
+import { AiOutlinePlusCircle, AiFillMinusCircle, AiFillInstagram, AiFillFacebook } from 'react-icons/ai';
+import { TbWorldWww } from "react-icons/tb"
 
 const benefitsData = [
   {
@@ -308,7 +309,41 @@ function App() {
         </animated.button>
       </div>
       <footer className={`Rodape${showForm ? 'blur-text' : ''}`}>
-        <p>Todos os direitos reservados &copy; {new Date().getFullYear()} Oxente Net</p>
+        <div className={`info${showForm ? 'blur-text' : ''}`}>
+        <h1>Endereço</h1>
+        <br/>
+        <p> Praça Dom José Lopes, nº 06, Pisos 1 e 2,
+          <br/>
+          centro, Pesqueira - PE </p>
+        </div>
+        <div className={`info${showForm ? 'blur-text' : ''}`}>
+        <h1>Horários</h1>
+        <h3>Seg-Sex: 08:00 às 18:00 </h3>
+        <h3> Sábado: 08:00 às 12:00 </h3>
+        <h3> Domingo: Fechado </h3>
+        </div>
+        <div className={`info${showForm ? 'blur-text' : ''}`}>
+        <h1>Telefones</h1>
+        <br/>
+        <p> Fixo: (87) 3835 - 8300 </p>
+        <p> Whatsapp: (87) 3835 - 8310 </p>
+        <br/>
+        <p> Sábado: 08:00 às 12:00 </p>
+        <p> Domingo: Fechado </p>
+        </div>
+        <div className={`info${showForm ? 'blur-text' : ''}`}>
+        <h1>Redes Sociais</h1>
+        <br/>
+        <a href="https://www.facebook.com/oxentenetoficial" target="_blank" rel="noopener noreferrer">
+            <AiFillFacebook style={{ fontSize: '3em', marginRight: '10px' }} />
+          </a>
+          <a href="https://www.instagram.com/oxentenetoficial/" target="_blank" rel="noopener noreferrer">
+            <AiFillInstagram style={{ fontSize: '3em', marginRight: '10px' }} />
+          </a>
+          <a href="https://www.oxente.net" target="_blank" rel="noopener noreferrer">
+            <TbWorldWww style={{ fontSize: '3em', marginRight: '10px' }} />
+          </a>
+        </div>
       </footer>
     </div>
   );
