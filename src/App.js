@@ -9,8 +9,9 @@ import homemCelular from './images/homemCelular.jpg';
 import './App.css';
 import { useSpring, animated } from 'react-spring';
 import emailjs from 'emailjs-com'; // Importe 'emailjs-com' em vez de '@emailjs/browser'
-import { AiOutlinePlusCircle, AiFillMinusCircle, AiFillInstagram, AiFillFacebook } from 'react-icons/ai';
-import { TbWorldWww } from "react-icons/tb"
+import WhatsAppIcon from './components/WhatsAppIcon';
+import { AiOutlineWhatsApp, AiOutlinePlusCircle, AiFillMinusCircle, AiFillInstagram, AiFillFacebook } from 'react-icons/ai';
+import { TbWorldWww } from "react-icons/tb";
 
 const benefitsData = [
   {
@@ -73,6 +74,27 @@ function App() {
     },
   ]);
 
+  const [whatsappIconPulsing, setWhatsappIconPulsing] = useState(false);
+
+ const WhatsAppIconComponent = ({ phoneNumber, videoVisible }) => {
+  const [pulsing, setPulsing] = useState(false);
+
+  const handleWhatsAppClick = () => {
+    window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}`, '_blank');
+  };
+
+  return (
+    <div
+      className={`FloatingWhatsApp ${videoVisible ? 'show' : ''} ${pulsing ? 'pulsing' : ''}`}
+      onClick={handleWhatsAppClick}
+      onMouseEnter={() => setPulsing(true)}
+      onMouseLeave={() => setPulsing(false)}
+    >
+      <AiOutlineWhatsApp />
+    </div>
+  );
+};
+
   const toggleFAQ = (index) => {
     const updatedFAQData = [...faqData];
     updatedFAQData[index].open = !updatedFAQData[index].open;
@@ -130,6 +152,8 @@ function App() {
           }
         }
       });
+
+      
 
       const videoSection = document.querySelector('.VideoSection');
       if (videoSection) {
@@ -308,6 +332,7 @@ function App() {
           Fale com um Especialista
         </animated.button>
       </div>
+      <WhatsAppIconComponent phoneNumber="8738358310" videoVisible={videoVisible} />
       <footer className={`Rodape${showForm ? 'blur-text' : ''}`}>
         <div className={`info${showForm ? 'blur-text' : ''}`}>
         <h1>Endereço</h1>
