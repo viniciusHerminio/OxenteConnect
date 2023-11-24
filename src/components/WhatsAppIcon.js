@@ -1,16 +1,32 @@
 import React from 'react';
-import { AiOutlineWhatsApp } from 'react-icons/ai';
+import { RiWhatsappFill } from "react-icons/ri";
+import { useSpring, animated } from 'react-spring';
 
 const WhatsAppIcon = ({ phoneNumber }) => {
-  const handleWhatsAppClick = () => {
-    // Logic to redirect to WhatsApp
-    window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}`, '_blank');
+  const [hovered, setHovered] = React.useState(false);
+
+  const iconAnimation = useSpring({
+    transform: `scale(${hovered ? 1.1 : 1}) rotate(${hovered ? 5 : 0}deg)`,
+    onRest: () => setHovered(false), // Resetar a animação após a conclusão
+  });
+
+  const handleClick = () => {
+    window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}`);
+  };
+
+  const handleMouseEnter = () => {
+    setHovered(true);
   };
 
   return (
-    <div className="WhatsAppIcon" onClick={handleWhatsAppClick}>
-      <AiOutlineWhatsApp style={{ fontSize: '3em', color: '#25d366' }} />
-    </div>
+    <animated.div
+      className="WhatsAppIcon"
+      style={iconAnimation}
+      onMouseEnter={handleMouseEnter}
+      onClick={handleClick}
+    >
+      <RiWhatsappFill />
+    </animated.div>
   );
 };
 
