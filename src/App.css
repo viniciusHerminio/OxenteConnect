@@ -840,6 +840,31 @@ body {
 
 @media (max-width: 600px) {
 
+  .Rodape {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Rodape p {
+    font-size: 14px;
+    margin: 5px 0; /* Espaçamento entre os parágrafos no rodapé */
+  }
+
+  .RedesSociais {
+    margin-top: 10px; /* Espaçamento entre o texto e as redes sociais */
+  }
+
+  .RedesSociais a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .WhatsAppIcon {
+    margin-top: 10px; /* Espaçamento acima do ícone do WhatsApp */
+  }
+
+
   .BotaoVideo {
     display: flex;
     flex-direction: column;
