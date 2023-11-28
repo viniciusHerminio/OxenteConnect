@@ -1039,6 +1039,15 @@ body {
 }
 
 
+.WhatsAppIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  animation: pulsateNotification 1.5s infinite;
+}
+
 @keyframes pulsateNotification {
   0% {
     transform: scale(1);
@@ -1051,14 +1060,7 @@ body {
   }
 }
 
-.FloatingWhatsApp:hover {
-  background-color: #128C7E; /* Cor de destaque ao passar o mouse */
-}
-
-.WhatsAppIcon {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+.WhatsAppIcon:hover {
+  animation: none; /* Remova a animação ao passar o mouse para evitar interferência */
+  color: #128C7E; /* Altere a cor ao passar o mouse para destacar */
 }
