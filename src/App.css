@@ -844,26 +844,36 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 10px;
+    padding: 20px; /* Adicione algum preenchimento ao rodapé */
   }
-
+  
   .Rodape p {
     font-size: 14px;
     margin: 5px 0; /* Espaçamento entre os parágrafos no rodapé */
+    margin-left: 100px;
   }
 
+  .Rodape h1, h3 {
+    margin-left: 100px;
+  }
+  
   .RedesSociais {
     margin-top: 10px; /* Espaçamento entre o texto e as redes sociais */
   }
-
+  
   .RedesSociais a {
     display: inline-block;
     margin: 0 10px;
   }
 
+  .icons {
+    margin-left: 100px;
+  }
+  
   .WhatsAppIcon {
     margin-top: 10px; /* Espaçamento acima do ícone do WhatsApp */
   }
-
 
   .BotaoVideo {
     display: flex;
@@ -980,8 +990,6 @@ body {
     margin-top: 200px;
     margin-bottom: 250px;
   }
-
-  .buttonNumberTwo {}
 
   .fotoHomem {
     display: none;

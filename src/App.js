@@ -160,7 +160,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className='geral'>
       <div className={`Header ${showForm ? 'blur-background' : ''}`}>
         <img src={logo} className="Logo" alt="Logo" />
         <div className='opHeader'>
@@ -338,6 +338,7 @@ function App() {
         <div className={`info${showForm ? 'blur-text' : ''}`}>
         <h1>Redes Sociais</h1>
         <br/>
+        <div className='icons'>
         <a href="https://www.facebook.com/oxentenetoficial" target="_blank" rel="noopener noreferrer">
             <AiFillFacebook style={{ fontSize: '3em', marginRight: '10px' }} />
           </a>
@@ -347,6 +348,7 @@ function App() {
           <a href="https://www.oxente.net" target="_blank" rel="noopener noreferrer">
             <TbWorldWww style={{ fontSize: '3em', marginRight: '10px' }} />
           </a>
+          </div>
         </div>
       </footer>
     </div>
