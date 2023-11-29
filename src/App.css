@@ -294,7 +294,10 @@ body {
 .VideoSectionblur-text {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 100px;
+  background-color: #cccccc2c;
+  padding: 30px;
   filter: blur(5px)
 }
 
@@ -494,6 +497,15 @@ body {
   margin-bottom: 250px;
 }
 
+.buttonNumberOneContainerblur-background {
+  filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 200px;
+  margin-bottom: 250px;
+}
+
 .planosContainer {
   margin-top: 200px;
 }
@@ -524,6 +536,7 @@ body {
 .buttonNumberOneblur-text {
   display: inline-block;
   height: 50px;
+  width: 100%;
   font-size: 16px;
   padding: 10px 20px;
   font-weight: bold;
@@ -535,6 +548,8 @@ body {
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+  margin-top: 10px;
   filter: blur(5px);
 }
 
@@ -630,6 +645,7 @@ body {
 
 .primeiroTitleblur-text {
   filter: blur(5px);
+  font-family: 'Nunito', sans-serif;
   color: #e65100;
 }
 
@@ -666,6 +682,15 @@ body {
   color: white;
 }
 
+.infoblur-text {
+  margin-right: 100px;
+  color: white;
+}
+
+.infoblur-text a {
+  color: white;
+}
+
 .Rodape {
   background-color: #e65100; /* Cor de fundo do rodapé */
   color: #ffffff; /* Cor do texto */
@@ -679,16 +704,22 @@ body {
 
 .Rodapeblur-text {
   filter: blur(5px);
-  background-color: #33333398; /* Cor de fundo do rodapé */
+  background-color: #e65100; /* Cor de fundo do rodapé */
   color: #fff; /* Cor do texto */
   text-align: center; /* Centralizar o texto */
   margin-top: 50px;
-  padding: 10px;
+  padding: 30px;
   font-size: 12px;
+  display: flex;
+  justify-content: center;
 }
 
 .Rodape p {
   margin: 0; /* Remova a margem padrão para evitar espaço em branco extra */
+}
+
+.Rodapeblur-text p {
+  margin: 0;
 }
 
 .FAQSection {
@@ -847,6 +878,14 @@ body {
     margin-top: 10px;
     padding: 20px; /* Adicione algum preenchimento ao rodapé */
   }
+
+  .Rodapeblur-text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px; /* Adicione algum preenchimento ao rodapé */
+  }
   
   .Rodape p {
     font-size: 14px;
@@ -854,7 +893,17 @@ body {
     margin-left: 100px;
   }
 
+  .Rodapeblur-text p {
+    font-size: 14px;
+    margin: 5px 0; /* Espaçamento entre os parágrafos no rodapé */
+    margin-left: 100px;
+  }
+
   .Rodape h1, h3 {
+    margin-left: 100px;
+  }
+
+  .Rodapeblur-text h1, h3 {
     margin-left: 100px;
   }
   
@@ -976,6 +1025,16 @@ body {
     transition: opacity 0.5s, transform 0.5s;
   }
 
+  .VideoSectionblur-text {
+    filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  
+  }
+
   .VideoSection.slide-in {
     opacity: 1;
     transform: translateY(0);
@@ -992,6 +1051,10 @@ body {
   }
 
   .fotoHomem {
+    display: none;
+  }
+
+  .fotoHomemblur-text {
     display: none;
   }
 

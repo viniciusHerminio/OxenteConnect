@@ -175,11 +175,11 @@ function App() {
 
       <img className={`Banner ${showForm ? 'blur-background' : ''}`} src={Banner} alt='Banner' />
       <div className='MobileContent'>
-  <div className='buttonNumberOneContainer'>
-    <div className='textoBotao'>
-      <div className='textoCopy'>
-        <animated.h2 style={slideAnimation} className={`primeiroTitle${showForm ? 'blur-text' : ''}`}>O que é o PABX Virtual?</animated.h2>
-        <animated.p style={slideAnimation} className={`textoDaCopy${showForm ? 'blur-text' : ''}`}>
+  <div className={`buttonNumberOneContainer${showForm ? 'blur-background' : ''}`}>
+    <div className={`textoCopy ${showForm ? 'blur-background' : ''}`}>
+      <div className={`textoCopy ${showForm ? 'blur-background' : ''}`}>
+        <animated.h2 style={slideAnimation} className={`primeiroTitle ${showForm ? 'blur-text' : ''}`}>O que é o PABX Virtual?</animated.h2>
+        <animated.p style={slideAnimation} className="textoDaCopy">
         O PABX Virtual, também conhecido como PBX em nuvem,
         é uma evolução do sistema de PABX tradicional. Em vez
         de hardware físico, ele é baseado na nuvem, o que
