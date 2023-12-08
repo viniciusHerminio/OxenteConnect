@@ -879,6 +879,12 @@ body {
     padding: 20px; /* Adicione algum preenchimento ao rodapé */
   }
 
+  .textoCopy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .Rodapeblur-text {
     flex-direction: column;
     align-items: center;
@@ -1090,7 +1096,7 @@ body {
     margin-bottom: 20px; /* Espaço entre o texto e o botão */
   }
 
-  .textoBotao .textoCopy {
+  .textoBotao {
     text-align: left; /* Alinha o texto à esquerda */
     margin-left: 100px;
   }
@@ -1098,10 +1104,6 @@ body {
   .buttonNumberOne {
     margin-top: 20px; /* Espaço entre o texto e o botão */
     width: 300px;
-  }
-
-  .primeiroBotao {
-    margin-left: 100px;
   }
 
   .primeiroTitle {
