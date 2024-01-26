@@ -868,6 +868,19 @@ body {
   margin-top: 10px;
 }
 
+.titleVideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -100px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #333;
+}
+
+.subtitle {
+  margin: -100;
+}
 
 @media (max-width: 600px) {
 

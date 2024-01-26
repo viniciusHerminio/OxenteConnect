@@ -16,23 +16,23 @@ import WhatsAppIcon from './components/WhatsAppIcon';
 const benefitsData = [
   {
     icon: nuvem,
-    title: 'Integração com o Provedor de Internet',
-    description: 'Integração com nosso provedor de internet para maior segurança, velocidade e fácil manutenção em todo o sistema.'
+    title: 'Número Virtual',
+    description: 'Para receber ligações externas e passar confiabilidade aos seus clientes utilizando número fixo.'
   },
   {
     icon: mobilidade,
-    title: 'Mobilidade e Flexibilidade',
-    description: 'Permite a comunicação de qualquer lugar, proporcionando maior mobilidade e flexibilidade para os usuários, facilitando o trabalho remoto e deslocamentos.'
+    title: 'Comunicação entre Ramais gratuita',
+    description: 'Se comunique independente da região que estiver, a ligação entre ramais é gratuita.'
   },
   {
     icon: financeiro,
-    title: 'Economia de Custos',
-    description: 'Reduz os custos operacionais e de manutenção, pois utiliza a infraestrutura de rede existente e elimina a necessidade de hardware físico extenso.'
+    title: 'Portabilidade',
+    description: 'raga seu número para o DDD 011 (região São Paulo) e economize nas ligações.'
   },
   {
     icon: gestao,
-    title: 'Gestão e Monitoramento Avançados',
-    description: 'Oferece recursos avançados de gestão e monitoramento em tempo real, possibilitando um controle mais eficaz das chamadas, o que contribui para melhorar a eficiência da comunicação empresarial.'
+    title: 'Dispositivos',
+    description: 'Atenda de qualquer lugar, apenas usando internet*. Através de aplicativos em seu Smartphone, com o Softphone em seu notebook, disponível também para Telefones IPs e Modem ATA.'
   }
 ];
 
@@ -239,7 +239,10 @@ function App() {
 </form>
         </div>
       )}
-
+      <div className='titleVideo'>
+        <h1>Mais controle e flexibilidade para profissionalizar seu atendimento</h1>
+        <h3 className='subtitle'>Sua central de atendimento pelo computador, aparelho fixo ou dispositivos móveis</h3>
+      </div>
       <div className={`VideoSection${showForm ? 'blur-text' : ''} ${videoVisible ? 'slide-in' : ''}`}>
         <div className='botaoVideo'>
           <iframe
